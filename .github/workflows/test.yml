@@ -23,7 +23,7 @@ jobs:
 
     - name: Run tests and generate results
       run: |
-        cd pycalculator
+        cd D:\CTNT41073\Tasks\python-task\pycalculator
         unittest --junitxml=test_results/report.xml tests/
 
     - name: Upload test results
