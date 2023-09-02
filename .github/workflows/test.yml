@@ -22,12 +22,10 @@ jobs:
       run: pip freeze > requirements.txt  # Adjust to your requirements file location
 
     - name: Run tests and generate results
-      run: |
-        cd CTNT41073/Tasks/python-task/pycalculator
-        unittest --junitxml=test_results/report.xml tests/
+      run:  unittest --junitxml=test_results/report.xml tests/
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: pycalculator/test-results/  # Modify this to the location of your test result files
+        path: pycalculator/test_results/  # Modify this to the location of your test result files
