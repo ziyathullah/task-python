@@ -22,9 +22,7 @@ jobs:
       run: pip freeze > requirements.txt  # Adjust to your requirements file location
 
     - name: Run tests and generate results
-      run:  |
-        cd .
-        pytest --junitxml=test_results/report.xml tests/
+      run:  python -m unittest discover
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
