@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: pycalculator/test_results/  # Modify this to the location of your test result files
+        path: test_results  # Modify this to the location of your test result files
